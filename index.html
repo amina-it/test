@@ -3,21 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Прогрессивное веб-приложение (PWA)">
-    <title>My PWA</title>
-    <!-- Подключение CSS -->
+    <title>My Visual Novel</title>
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <!-- Основной контейнер -->
+    <div id="background" class="background"></div>
     <div class="container">
-        <h1>Добро пожаловать в My PWA</h1>
-        <p>Это пример простого прогрессивного веб-приложения.</p>
-        <button onclick="alert('Вы нажали на кнопку!')">Нажми меня</button>
-        <p>Узнай больше <a href="https://github.com" target="_blank">здесь</a>.</p>
+        <h1 id="title">Моя Новелла</h1>
+        <p id="story-text">Здесь будет ваш сюжет.</p>
+        <div id="options"></div>
     </div>
-
-    <!-- Подключение JavaScript (если понадобится) -->
     <script src="index.js"></script>
 </body>
 </html>
