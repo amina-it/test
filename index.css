@@ -1,58 +1,58 @@
-/* Общие стили */
-body {
-    font-family: 'Arial', sans-serif; /* Шрифт для текста */
+/* Сброс стилей */
+body, html {
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9; /* Светло-серый фон */
-    color: #333; /* Тёмный цвет текста */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh; /* Высота на весь экран */
+    width: 100%;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-color: #000;
 }
 
-/* Заголовок */
-h1 {
-    font-size: 2.5rem;
-    color: #4CAF50; /* Зеленый цвет заголовка */
-    margin-bottom: 10px;
+/* Фон */
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
 }
 
-/* Кнопки */
+/* Контейнер текста */
+.container {
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: #fff;
+    max-width: 600px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+}
+
+/* Текст сюжета */
+#story-text {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/* Кнопки выбора */
 button {
-    background-color: #4CAF50; /* Зеленый фон */
-    color: white; /* Белый текст */
+    background-color: #4CAF50;
+    color: white;
     border: none;
     padding: 10px 20px;
-    margin: 10px;
+    margin: 5px;
     font-size: 1rem;
-    border-radius: 5px; /* Закругленные края */
+    border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #45a049; /* Цвет кнопки при наведении */
-}
-
-/* Ссылки */
-a {
-    color: #4CAF50;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-a:hover {
-    text-decoration: underline; /* Подчеркивание при наведении */
-}
-
-/* Контейнер */
-.container {
-    text-align: center;
-    padding: 20px;
-    max-width: 600px;
-    background: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень */
-    border-radius: 10px; /* Закругленные углы */
+    background-color: #45a049;
 }
