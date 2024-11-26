@@ -1,0 +1,58 @@
+/* Общие стили */
+body {
+    font-family: 'Arial', sans-serif; /* Шрифт для текста */
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9; /* Светло-серый фон */
+    color: #333; /* Тёмный цвет текста */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Высота на весь экран */
+}
+
+/* Заголовок */
+h1 {
+    font-size: 2.5rem;
+    color: #4CAF50; /* Зеленый цвет заголовка */
+    margin-bottom: 10px;
+}
+
+/* Кнопки */
+button {
+    background-color: #4CAF50; /* Зеленый фон */
+    color: white; /* Белый текст */
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 1rem;
+    border-radius: 5px; /* Закругленные края */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049; /* Цвет кнопки при наведении */
+}
+
+/* Ссылки */
+a {
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline; /* Подчеркивание при наведении */
+}
+
+/* Контейнер */
+.container {
+    text-align: center;
+    padding: 20px;
+    max-width: 600px;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень */
+    border-radius: 10px; /* Закругленные углы */
+}
