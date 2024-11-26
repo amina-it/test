@@ -1,30 +1,32 @@
-const scenes = {
-    start: {
-        text: "Вы стоите у дороги. Куда пойдёте?",
-        options: [
-            { text: "Направо", nextScene: "rightPath" },
-            { text: "Налево", nextScene: "leftPath" }
-        ]
-    },
-    rightPath: {
-        text: "Вы идёте направо и находите дом. Что делать?",
-        options: [
-            { text: "Зайти в дом", nextScene: "enterHouse" },
-            { text: "Уйти обратно", nextScene: "start" }
-        ]
-    },
-    leftPath: {
-        text: "Вы идёте налево и видите мост.",
-        options: [
-            { text: "Перейти мост", nextScene: "crossBridge" },
-            { text: "Вернуться", nextScene: "start" }
-        ]
-    },
-    enterHouse: {
-        text: "Вы вошли в дом и встретили старого мудреца. История продолжается..."
-    },
-    crossBridge: {
-        text: "Вы пересекли мост и нашли клад. История заканчивается!"
-    }
-};
+// Элементы страницы
+const textElement = document.getElementById("story-text");
+const optionsElement = document.getElementById("options");
+const backgroundElement = document.getElementById("background");
 
+// Текущая сцена
+let currentScene = "start";
+
+// Отображение сцены
+function showScene(sceneKey) {
+    const scene = scenes[sceneKey];
+    currentScene = sceneKey;
+
+    // Обновляем текст
+    textElement.textContent = scene.text;
+
+    // Очищаем старые кнопки
+    optionsElement.innerHTML = "";
+
+    // Добавляем кнопки выбора
+    if (scene.options) {
+        scene.options.forEach(option => {
+            const button = document.createElement("button");
+            button.textContent = option.text;
+            button.onclick = () => showScene(option.nextScene);
+            optionsElement.appendChild(button);
+        });
+    }
+}
+
+// Инициализация
+showScene(currentScene);
