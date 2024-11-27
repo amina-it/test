@@ -8,7 +8,7 @@
     background-size: cover; /* Масштабирование фона, чтобы покрыть весь экран */
     background-position: center; /* Центрирование фона */
     z-index: -1; /* Уводим фон на задний план */
-    background-image: url('images/background.clip');
+    background-image: url('images/Fon.png');
 }
 #frame {
     position: fixed;
