@@ -1,58 +1,42 @@
-/* Сброс стилей */
-body, html {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    font-family: Arial, sans-serif;
-    background-color: #000;
-}
-
-/* Фон */
-.background {
+#background {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    z-index: -1;
+    width: 100vw; /* Полная ширина экрана */
+    height: 100vh; /* Полная высота экрана */
+    background-image: url('your-background.jpg'); /* Замените на путь к вашему изображению */
+    background-size: cover; /* Масштабирование фона, чтобы покрыть весь экран */
+    background-position: center; /* Центрирование фона */
+    z-index: -1; /* Уводим фон на задний план */
 }
-
-/* Контейнер текста */
-.container {
-    position: absolute;
-    bottom: 20%;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-    color: #fff;
-    max-width: 600px;
+#frame {
+    position: fixed;
+    bottom: 5%; /* Отступ от нижнего края экрана */
+    left: 50%; /* Центрирование по горизонтали */
+    transform: translateX(-50%); /* Корректировка центрирования */
+    width: 80%; /* Ширина фрейма — 80% экрана */
     padding: 20px;
-    background: rgba(0, 0, 0, 0.6);
-    border-radius: 10px;
-}
-
-/* Текст сюжета */
-#story-text {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-}
-
-/* Кнопки выбора */
-button {
-    background-color: #4CAF50;
+    background: rgba(0, 0, 0, 0.7); /* Полупрозрачный чёрный фон */
+    border-radius: 15px; /* Закруглённые углы */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Лёгкая тень */
     color: white;
-    border: none;
+    font-size: 1.2rem;
+    z-index: 1; /* Размещаем поверх фона */
+    overflow-y: auto; /* Прокрутка, если текст превышает высоту фрейма */
+}
+#options button {
+    display: inline-block;
+    margin: 10px 5px;
     padding: 10px 20px;
-    margin: 5px;
     font-size: 1rem;
+    color: white;
+    background-color: #4CAF50; /* Зелёный цвет кнопок */
+    border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s;
 }
 
-button:hover {
-    background-color: #45a049;
+#options button:hover {
+    background-color: #45a049; /* Более тёмный оттенок при наведении */
 }
